@@ -5,6 +5,7 @@ import edu.wpi.first.wpilibj.Joystick;
 public class Joysticks {
 	Joystick driveStick = new Joystick(1);
 	Joystick turnStick = new Joystick(2);
-	
-	//Initialize joysticks (help pls)
+	Joystick sliderStick = new Joystick(3);
+	Joystick climbStick = new Joystick(4);
+	a = driveStick.getY();
 }
