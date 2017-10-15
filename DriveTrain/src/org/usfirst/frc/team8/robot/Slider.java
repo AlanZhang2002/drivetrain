@@ -6,5 +6,5 @@ import edu.wpi.first.wpilibj.AnalogPotentiometer;
 
 public class Slider {//initialize stuff, create logic and such
 	CANTalon sliderCT = new CANTalon(7);
-	AnalogPotentiometer pMeter = new AnalogPotentiometer(1);
+	AnalogPotentiometer pMeter = new AnalogPotentiometer(9);
 }

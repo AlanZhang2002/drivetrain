@@ -7,5 +7,10 @@ public class Joysticks {
 	Joystick turnStick = new Joystick(2);
 	Joystick sliderStick = new Joystick(3);
 	Joystick climbStick = new Joystick(4);
-	a = driveStick.getY();
+	
+	double driveSpeed = driveStick.getY();
+	double turnSpeed = turnStick.getX();
+	double sliderSpeed = sliderStick.getY();
+	double climbSpeed = climbStick.getY();
+	
 }

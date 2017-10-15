@@ -10,6 +10,7 @@ public class Drive {
 	CANTalon right2 = new CANTalon(5);
 	CANTalon right3 = new CANTalon(6);
 
-
+	// motor.set(speed);
+	left1.set(Joysticks.Joysticks.driveSpeed + Joysticks.Joysticks.turnSpeed);
 	
 }
