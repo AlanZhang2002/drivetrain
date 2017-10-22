@@ -8,9 +8,9 @@ public class Joysticks {
 	Joystick sliderStick = new Joystick(3);
 	Joystick climbStick = new Joystick(4);
 	
-	double driveSpeed = driveStick.getY();
-	double turnSpeed = turnStick.getX();
-	double sliderSpeed = sliderStick.getY();
-	double climbSpeed = climbStick.getY();
+	double driveSpeed = - driveStick.getY();
+	double turnSpeed = turnStick.getX();//works if positive values = left turn
+	double sliderSpeed = - sliderStick.getY();
+	double climbSpeed = - climbStick.getY();
 	
 }

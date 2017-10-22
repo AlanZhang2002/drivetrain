@@ -13,16 +13,16 @@ public class Drive {
 	Joysticks joysticks = new Joysticks();
 	
 	// motor.set(speed);
-	public void Activated() {//static errors, pls research and fix
-		double turnSpeed = joysticks.turnSpeed;
+	public void Activated() {
+		double turnSpeed = joysticks.turnSpeed;//pos values = left turn
 		double driveSpeed = joysticks.driveSpeed;
 		
 		left1.set(driveSpeed + turnSpeed);
 		left2.set(driveSpeed + turnSpeed);
 		left3.set(driveSpeed + turnSpeed);
-		right1.set(-driveSpeed - turnSpeed);
-		right2.set(-driveSpeed - turnSpeed);
-		right3.set(-driveSpeed - turnSpeed);
+		right1.set(-driveSpeed + turnSpeed);//basically driveSpeed - turnSpeed, but reversed
+		right2.set(-driveSpeed + turnSpeed);
+		right3.set(-driveSpeed + turnSpeed);
 	}
 	
 }

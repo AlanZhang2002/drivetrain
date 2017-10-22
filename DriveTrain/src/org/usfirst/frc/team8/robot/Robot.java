@@ -88,9 +88,9 @@ public class Robot extends IterativeRobot {
 	}
 	
 	/*
-	Questions:
+	QUESTIONS:
 	correct port numbers?
-	...
+	logic?
 	*/
 	
 	@Override
