@@ -9,8 +9,20 @@ public class Drive {
 	CANTalon right1 = new CANTalon(4);
 	CANTalon right2 = new CANTalon(5);
 	CANTalon right3 = new CANTalon(6);
-
+	
+	Joysticks joysticks = new Joysticks();
+	
 	// motor.set(speed);
-	left1.set(Joysticks.Joysticks.driveSpeed + Joysticks.Joysticks.turnSpeed);
+	public void Activated() {//static errors, pls research and fix
+		double turnSpeed = joysticks.turnSpeed;
+		double driveSpeed = joysticks.driveSpeed;
+		
+		left1.set(driveSpeed + turnSpeed);
+		left2.set(driveSpeed + turnSpeed);
+		left3.set(driveSpeed + turnSpeed);
+		right1.set(-driveSpeed - turnSpeed);
+		right2.set(-driveSpeed - turnSpeed);
+		right3.set(-driveSpeed - turnSpeed);
+	}
 	
 }

@@ -1,9 +1,5 @@
 package org.usfirst.frc.team8.robot;
 
-import com.ctre.CANTalon;
-
-import edu.wpi.first.wpilibj.AnalogPotentiometer;
-import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -25,6 +21,8 @@ public class Robot extends IterativeRobot {
 	Drive drivetrain;
 	Joysticks joysticks;
 	Climber climber;
+	
+	
 
 	/**
 	 * This function is run when the robot is first started up and should be
@@ -61,9 +59,6 @@ public class Robot extends IterativeRobot {
 		System.out.println("Auto selected: " + autoSelected);
 	}
 
-	/**
-	 * This function is called periodically during autonomous
-	 */
 	@Override
 	public void autonomousPeriodic() {
 		switch (autoSelected) {
@@ -92,12 +87,17 @@ public class Robot extends IterativeRobot {
 		
 	}
 	
-	/**
-	 * This function is called periodically during operator control
-	 */
+	/*
+	Questions:
+	correct port numbers?
+	...
+	*/
+	
 	@Override
 	public void teleopPeriodic() {
-		
+		drivetrain.Activated();
+		slider.Activated();
+		climber.Activated();
 	}
 }
 
