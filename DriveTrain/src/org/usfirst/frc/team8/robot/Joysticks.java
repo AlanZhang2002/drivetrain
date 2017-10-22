@@ -12,5 +12,6 @@ public class Joysticks {
 	double turnSpeed = turnStick.getX();//works if positive values = left turn
 	double sliderSpeed = - sliderStick.getY();
 	double climbSpeed = - climbStick.getY();
+	boolean spatulaTrigger = sliderStick.getTrigger();
 	
 }
