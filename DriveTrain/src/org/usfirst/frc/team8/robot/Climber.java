@@ -7,6 +7,6 @@ public class Climber {
 	Joysticks joysticks = new Joysticks();
 	
 	public void Activated() {
-		climberCT.set(joysticks.climbSpeed);
+		climberCT.set(joysticks.climbSpeed());
 	}
 }

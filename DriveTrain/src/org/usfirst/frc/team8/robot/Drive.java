@@ -12,10 +12,9 @@ public class Drive {
 	
 	Joysticks joysticks = new Joysticks();
 	
-	// motor.set(speed);
 	public void Activated() {
-		double turnSpeed = joysticks.turnSpeed;//pos values = left turn
-		double driveSpeed = joysticks.driveSpeed;
+		double turnSpeed = joysticks.turnSpeed();//pos values = left turn
+		double driveSpeed = joysticks.driveSpeed();
 		
 		left1.set(driveSpeed + turnSpeed);
 		left2.set(driveSpeed + turnSpeed);
@@ -23,6 +22,6 @@ public class Drive {
 		right1.set(-driveSpeed + turnSpeed);//basically driveSpeed - turnSpeed, but reversed
 		right2.set(-driveSpeed + turnSpeed);
 		right3.set(-driveSpeed + turnSpeed);
-	}
+	} 
 	
 }
