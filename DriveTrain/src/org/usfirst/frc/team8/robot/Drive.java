@@ -16,7 +16,7 @@ public class Drive {
 		double turnSpeed = joysticks.turnSpeed();//pos values = left turn
 		double driveSpeed = joysticks.driveSpeed();
 		
-		left1.set(driveSpeed + turnSpeed);
+		left1.set(driveSpeed + turnSpeed);// when left side goes faster and right side goes slower when turning, it turns right
 		left2.set(driveSpeed + turnSpeed);
 		left3.set(driveSpeed + turnSpeed);
 		right1.set(-driveSpeed + turnSpeed);//basically driveSpeed - turnSpeed, but reversed

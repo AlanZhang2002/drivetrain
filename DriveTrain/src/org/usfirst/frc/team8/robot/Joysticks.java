@@ -11,11 +11,11 @@ public class Joysticks {
 	public double sliderSpeed() {
 		return -sliderStick.getY();
 	}
-	public double driveSpeed() {
+	public double driveSpeed() {// positive driveSpeed is forwards
 		return -driveStick.getY();
 	}
-	public double turnSpeed() {
-		return -turnStick.getX();
+	public double turnSpeed() {// positive turnSpeed is right
+		return turnStick.getX();
 	}
 	public double climbSpeed() {
 		return -climbStick.getY();
@@ -24,11 +24,4 @@ public class Joysticks {
 		return sliderStick.getTrigger();
 	}
 	
-	/*
-	double driveSpeed = -driveStick.getY();
-	double turnSpeed = -turnStick.getX();//works if positive values = left turn
-	double sliderSpeed = -sliderStick.getY();
-	double climbSpeed = -climbStick.getY();
-	boolean spatulaTrigger = sliderStick.getTrigger();
-	*/
 }
