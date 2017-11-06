@@ -9,7 +9,7 @@ public class Joysticks {
 	Joystick climbStick = new Joystick(3);
 	
 	public double sliderSpeed() {
-		return -sliderStick.getY();
+		return sliderStick.getX() / 4;
 	}
 	public double driveSpeed() {// positive driveSpeed is forwards
 		return -driveStick.getY();

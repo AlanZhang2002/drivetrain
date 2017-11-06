@@ -8,20 +8,31 @@ import edu.wpi.first.wpilibj.DoubleSolenoid.Value;
 
 public class Slider {
 	CANTalon sliderCT = new CANTalon(10);
-	AnalogPotentiometer pMeter = new AnalogPotentiometer(0);
+	AnalogPotentiometer pMeter = new AnalogPotentiometer(3);
 	DoubleSolenoid spatula = new DoubleSolenoid(1, 2);
 	Joysticks joysticks = new Joysticks();
 	
-	double pMeasure = pMeter.get();
+	public double getPosition() {
+		return pMeter.get();
+	}
 	
 	public void Activated() {//Find logic
-		if (pMeasure > 0 && pMeasure < 1) {//does the pMeter go between 0 and 1
+		
+		
+		double position = getPosition();
+		
+		if (position > 0.59 && position < 0.76) {// 0.82 and 0.515, debugging rn
 			sliderCT.set(joysticks.sliderSpeed());
+			System.out.println(position);
 		}
 		else {
-			sliderCT.set(0);
+			if (position < 0.59 && joysticks.sliderSpeed() < 0) {
+				sliderCT.set(joysticks.sliderSpeed());
+			}
+			else if (position > 0.76 && joysticks.sliderSpeed() > 0) {
+				sliderCT.set(joysticks.sliderSpeed());
+			}
 		}
-		
 		if (joysticks.spatulaTrigger()) {
 			spatula.set(Value.kForward);
 		}
