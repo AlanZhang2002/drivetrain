@@ -18,18 +18,17 @@ public class Slider {
 	
 	public void Activated() {//Find logic
 		
-		
 		double position = getPosition();
 		
-		if (position > 0.59 && position < 0.76) {// 0.82 and 0.515, debugging rn
+		if (position > 0.53 && position < 0.8) {// 0.82 and 0.515, debugging rn
 			sliderCT.set(joysticks.sliderSpeed());
 			System.out.println(position);
 		}
 		else {
-			if (position < 0.59 && joysticks.sliderSpeed() < 0) {
+			if (position < 0.53 && joysticks.sliderSpeed() < 0) {
 				sliderCT.set(joysticks.sliderSpeed());
 			}
-			else if (position > 0.76 && joysticks.sliderSpeed() > 0) {
+			else if (position > 0.8 && joysticks.sliderSpeed() > 0) {
 				sliderCT.set(joysticks.sliderSpeed());
 			}
 		}
